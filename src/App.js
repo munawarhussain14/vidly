@@ -11,6 +11,8 @@ import RegisterForm from "./components/registerForm";
 import { Route, Routes, Navigate } from "react-router-dom";
 import "./App.css";
 
+some test document
+
 class App extends Component {
   render() {
     return (
@@ -18,14 +20,14 @@ class App extends Component {
         <NavBar />
         <main className="container">
           <Routes>
-            <Route path="/login" element={<LoginForm />}></Route>
-            <Route path="/register" element={<RegisterForm />}></Route>
-            <Route path="/movies/:id" element={<MovieForm />}></Route>
-            <Route path="/movies/new" element={<MovieForm />}></Route>
-            <Route path="/movies" element={<Movies {...this.props} />}></Route>
-            <Route path="/customers" element={<Customers />}></Route>
-            <Route path="/rentals" element={<Rentals />}></Route>
-            <Route path="/not-found" element={<NotFound />}></Route>
+            // <Route path="/login" element={<LoginForm />}></Route>
+            // <Route path="/register" element={<RegisterForm />}></Route>
+            // <Route path="/movies/:id" element={<MovieForm />}></Route>
+            // <Route path="/movies/new" element={<MovieForm />}></Route>
+            // <Route path="/movies" element={<Movies {...this.props} />}></Route>
+            // <Route path="/customers" element={<Customers />}></Route>
+            // <Route path="/rentals" element={<Rentals />}></Route>
+            // <Route path="/not-found" element={<NotFound />}></Route>
             <Route path="/" replace element={<Navigate to="/movies" />} />
             <Route path="*" replace element={<Navigate to="/not-found" />} />
           </Routes>
