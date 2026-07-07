@@ -1,0 +1,1 @@
+Our development is based on feature-based instructions, so create a feature branch from main. When the developer completes the work, the feature branch will then be merged into main.
