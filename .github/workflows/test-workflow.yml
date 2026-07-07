@@ -1,0 +1,27 @@
+name: Test Workflow
+
+# Trigger: runs on every push and pull request to any branch,
+# plus a manual "Run workflow" button (workflow_dispatch)
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+    branches: [ "**" ]
+  workflow_dispatch:
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Show a test message
+        run: echo "✅ GitHub Actions workflow is working! Hello from CI."
+
+      - name: Show some context info
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch/ref: ${{ github.ref }}"
+          echo "Triggered by: ${{ github.event_name }}"
+          echo "Commit SHA: ${{ github.sha }}"
